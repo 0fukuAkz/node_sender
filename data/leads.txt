@@ -1,0 +1,5 @@
+test@example.com
+invalid-email
+another@test.com
+not-an-email
+valid@domain.org

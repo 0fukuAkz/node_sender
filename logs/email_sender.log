@@ -1,0 +1,30 @@
+2025-08-18 20:40:14,236 - WARNING - Skipping invalid email address: invalid-email
+2025-08-18 20:40:14,237 - WARNING - Skipping invalid email address: not-an-email
+2025-08-18 20:40:14,237 - INFO - 🚀 Starting dispatch to 3 recipients...
+2025-08-18 20:40:14,266 - INFO - [DRY-RUN] Would send to test@example.com: Important message from Austin and Sons
+2025-08-18 20:40:14,266 - INFO - [DRY-RUN] Would send to valid@domain.org: Important message from Shelton PLC
+2025-08-18 20:40:14,266 - INFO - [DRY-RUN] Would send to another@test.com: Important message from Curry Cook and Crawford
+2025-08-18 20:40:14,267 - INFO - [DRY-RUN] Sent to test@example.com
+2025-08-18 20:40:14,267 - INFO - [DRY-RUN] Sent to valid@domain.org
+2025-08-18 20:40:14,267 - INFO - [DRY-RUN] Sent to another@test.com
+2025-08-18 20:40:14,267 - INFO - ✅ Dispatch complete. Successes=3, Failures=0
+2025-08-18 20:48:12,937 - WARNING - Skipping invalid email address: invalid-email
+2025-08-18 20:48:12,937 - WARNING - Skipping invalid email address: not-an-email
+2025-08-18 20:48:12,938 - INFO - 🚀 Starting dispatch to 3 recipients...
+2025-08-18 20:48:12,955 - INFO - [DRY-RUN] Would send to test@example.com: Important message from Cole PLC
+2025-08-18 20:48:12,955 - INFO - [DRY-RUN] Sent to test@example.com
+2025-08-18 20:48:14,958 - INFO - [DRY-RUN] Would send to another@test.com: Important message from Weaver Johnson and Martin
+2025-08-18 20:48:14,958 - INFO - [DRY-RUN] Would send to valid@domain.org: Important message from Miller-Hurley
+2025-08-18 20:48:14,959 - INFO - [DRY-RUN] Sent to another@test.com
+2025-08-18 20:48:14,959 - INFO - [DRY-RUN] Sent to valid@domain.org
+2025-08-18 20:48:14,959 - INFO - ✅ Dispatch complete. Successes=3, Failures=0
+2025-08-18 20:48:19,496 - WARNING - Skipping invalid email address: invalid-email
+2025-08-18 20:48:19,496 - WARNING - Skipping invalid email address: not-an-email
+2025-08-18 20:48:19,497 - INFO - 🚀 Starting dispatch to 3 recipients...
+2025-08-18 20:48:19,507 - INFO - [DRY-RUN] Would send to test@example.com: Special offer from Hurst Inc: 50% off on Widget Pro
+2025-08-18 20:48:19,507 - INFO - [DRY-RUN] Sent to test@example.com
+2025-08-18 20:48:19,512 - INFO - [DRY-RUN] Would send to another@test.com: Special offer from Johnson Brown and Walker: 50% off on Widget Pro
+2025-08-18 20:48:19,512 - INFO - [DRY-RUN] Sent to another@test.com
+2025-08-18 20:48:19,515 - INFO - [DRY-RUN] Would send to valid@domain.org: Special offer from Cox Smith and Hill: 50% off on Widget Pro
+2025-08-18 20:48:19,515 - INFO - [DRY-RUN] Sent to valid@domain.org
+2025-08-18 20:48:19,515 - INFO - ✅ Dispatch complete. Successes=3, Failures=0

@@ -1,0 +1,9 @@
+# Includes runtime dependencies
+-r requirements.txt
+
+# Dev tooling
+black==24.4.2           # Code formatter
+flake8==7.0.0           # Linter
+pytest==8.2.1           # Unit testing
+mypy==1.10.0            # Static type checker
+isort==5.13.2           # Import sorter
