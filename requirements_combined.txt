@@ -1,0 +1,33 @@
+# Core dependencies (from both projects)
+# =====================================
+
+# Email and networking
+aiosmtplib>=2.0.0          # Async SMTP (from sendfyre)
+PySocks>=1.7.0             # Proxy support (from both)
+dnspython>=2.0.0           # DNS validation (from sendfyre)
+requests>=2.25.0            # HTTP requests (from sendfyre)
+
+# File processing and conversion
+python-docx>=0.8.0         # DOCX processing (from sendfyre)
+PyPDF2>=3.0.0              # PDF processing (from sendfyre)
+fpdf>=1.7.0                 # PDF generation (from sendfyre)
+Pillow>=8.0.0              # Image processing (from sendfyre)
+xhtml2pdf>=0.2.0           # HTML to PDF (from sendfyre)
+
+# Advanced features
+qrcode>=7.0.0              # QR code generation (from sendfyre)
+jinja2>=3.0.0              # Template engine (from sendfyre)
+email_validator>=2.0.0     # Email validation (from sendfyre)
+
+# Utilities and identity generation
+Faker>=24.8.0              # Random data generation (from node_sender)
+
+# Development dependencies (optional)
+# =================================
+pytest>=6.0.0              # Testing framework
+pytest-asyncio>=0.18.0     # Async testing support
+pytest-cov>=3.0.0          # Coverage reporting
+black>=22.0.0               # Code formatting
+isort>=5.0.0                # Import sorting
+ruff>=0.0.200              # Fast linting
+mypy>=0.991                # Type checking
