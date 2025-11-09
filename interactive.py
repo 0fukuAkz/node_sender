@@ -7,9 +7,9 @@ import os
 import sys
 import getpass
 from pathlib import Path
-from config import Config
+from src.email_dispatcher import Config
 from main import main as run_dispatcher
-from validate_email_config import validate_config
+from scripts.validate_email_config import validate_config
 
 
 class InteractiveSetup:

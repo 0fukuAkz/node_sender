@@ -1,9 +1,22 @@
 import socks
 import socket
+from typing import Optional, Dict
 
-def apply_proxy(proxy):
+
+def apply_proxy(proxy: Optional[Dict[str, any]]) -> None:
+    """
+    Apply proxy settings to socket connections.
+    
+    Args:
+        proxy: Proxy configuration dictionary or None
+        
+    Note:
+        This modifies the global socket.socket, affecting all connections.
+        Use with caution in multi-threaded environments.
+    """
     if proxy is None:
         return
+    
     proxy_type = {
         'socks4': socks.SOCKS4,
         'socks5': socks.SOCKS5,

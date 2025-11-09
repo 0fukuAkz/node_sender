@@ -242,7 +242,7 @@ python3 main.py --help
 python3 main.py --dry-run
 
 # Validate configuration
-python3 validate_email_config.py
+python3 scripts/validate_email_config.py
 ```
 
 #### Advanced Options
@@ -285,26 +285,49 @@ TEMPLATE_PATH=templates/custom.html python3 main.py --dry-run
 
 ```
 node_sender/
+├── main.py                 # Main dispatcher (CLI mode)
 ├── interactive.py          # Interactive setup wizard
 ├── run_interactive.py      # Interactive mode launcher
-├── main.py                 # Main dispatcher (CLI mode)
-├── config.py               # Configuration management
-├── dispatcher.py           # Email sending logic
-├── template.py             # Template processing
-├── identity.py             # Random identity generation
-├── logger.py               # Logging setup
-├── proxy.py                # Proxy configuration
-├── file_io.py              # File operations
-├── validate_email_config.py # Configuration validator
+├── setup.py               # Package installation script
 ├── email_config.ini        # Configuration file
-├── requirements.txt         # Python dependencies
+├── requirements.txt        # Python dependencies
+├── requirements-dev.txt   # Development dependencies
+├── pytest.ini          # Pytest configuration
+├── src/
+│   └── email_dispatcher/  # Core package
+│       ├── __init__.py
+│       ├── config.py      # Configuration management
+│       ├── dispatcher.py  # Email sending logic
+│       ├── template.py    # Template processing
+│       ├── identity.py   # Random identity generation
+│       ├── logger.py      # Logging setup
+│       ├── proxy.py      # Proxy configuration
+│       ├── file_io.py    # File operations
+│       ├── encryptor.py  # Encryption utilities
+│       ├── connection_pool.py  # SMTP connection pooling
+│       ├── rate_limiter.py     # Rate limiting
+│       ├── state_manager.py   # State management
+│       ├── retry_queue.py     # Retry queue
+│       ├── metrics.py         # Metrics collection
+│       ├── exceptions.py      # Custom exceptions
+│       └── concurrency.py     # Concurrency utilities
+├── scripts/
+│   ├── validate_email_config.py  # Configuration validator
+│   └── run_tests.py              # Test runner
+├── tests/                  # Test suite
+│   ├── __init__.py
+│   ├── test_*.py          # Unit tests
+│   └── integration/       # Integration tests
+├── docs/                   # Documentation
+│   ├── PRODUCTION_UPGRADE.md
+│   └── QUICK_REFERENCE.md
 ├── data/
-│   ├── leads.txt           # Recipient email addresses
-│   ├── placeholders.txt    # Template variables (key=value)
-│   └── suppressions.txt    # Blocked email addresses
+│   ├── leads.txt          # Recipient email addresses
+│   ├── placeholders.txt   # Template variables (key=value)
+│   └── suppressions.txt   # Blocked email addresses
 ├── templates/
-│   ├── message.html        # Main email template
-│   └── attachment.html     # Optional attachment
+│   ├── message.html       # Main email template
+│   └── attachment.html    # Optional attachment
 └── logs/                   # Log files and tracking
 ```
 
@@ -458,13 +481,13 @@ export LOG_LEVEL=DEBUG
 python3 main.py --dry-run
 
 # Check configuration
-python3 validate_email_config.py
+python3 scripts/validate_email_config.py
 ```
 
 ### Getting Help
 
 1. **Check Logs**: Review `logs/email_sender.log`
-2. **Validate Config**: Run `python3 validate_email_config.py`
+2. **Validate Config**: Run `python3 scripts/validate_email_config.py`
 3. **Test Template**: Use dry-run mode
 4. **Check Dependencies**: Verify all packages installed
 
@@ -546,7 +569,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 For issues and questions:
 1. Check the troubleshooting section
 2. Review the logs in `logs/email_sender.log`
-3. Run `python3 validate_email_config.py` to verify configuration
+3. Run `python3 scripts/validate_email_config.py` to verify configuration
 4. Use dry-run mode to test without sending emails
 5. Check the examples section for common setups
 
