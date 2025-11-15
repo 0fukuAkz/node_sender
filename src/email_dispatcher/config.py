@@ -2,8 +2,9 @@ import configparser
 import os
 import stat
 import warnings
-from typing import Dict, Optional
+from typing import Optional
 from .exceptions import ConfigurationError, CredentialError
+from .types import SMTPSettings, ProxySettings, GeneralSettings
 
 
 class Config:
@@ -45,7 +46,7 @@ class Config:
         # Validate credentials on initialization
         self._validate_credentials()
 
-    def get_general_settings(self) -> Dict[str, any]:
+    def get_general_settings(self) -> GeneralSettings:
         general = {
             'mode': self.mode,
             'concurrency': int(os.getenv('CONCURRENCY', self.parser.getint('general', 'concurrency', fallback=10))),
@@ -89,7 +90,7 @@ class Config:
             general['from_email'] = from_email
         return general
 
-    def get_smtp_settings(self) -> Dict[str, any]:
+    def get_smtp_settings(self) -> SMTPSettings:
         return {
             'host': os.getenv('SMTP_HOST', self.parser.get('smtp', 'host', fallback='')),
             'port': int(os.getenv('SMTP_PORT', self.parser.getint('smtp', 'port', fallback=587))),
@@ -99,7 +100,7 @@ class Config:
             'use_auth': self._get_bool_env('SMTP_USE_AUTH', self.parser.getboolean('smtp', 'use_auth', fallback=True)),
         }
 
-    def get_proxy_settings(self) -> Optional[Dict[str, any]]:
+    def get_proxy_settings(self) -> Optional[ProxySettings]:
         if not self.parser.getboolean('proxy', 'enabled', fallback=False):
             return None
         return {

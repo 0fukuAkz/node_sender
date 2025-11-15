@@ -39,6 +39,7 @@ logs/*.log
 logs/*.txt
 logs/*.db
 logs/*.json
+logs/*.csv
 !logs/.gitkeep
 
 # Configuration (sensitive)

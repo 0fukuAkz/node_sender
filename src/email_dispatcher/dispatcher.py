@@ -5,7 +5,7 @@ Enhanced email dispatcher with connection pooling and error categorization
 import os
 import smtplib
 import mimetypes
-from typing import Dict, Optional
+from typing import Optional, Tuple
 from email.message import EmailMessage
 from email.utils import formataddr, formatdate, make_msgid
 
@@ -17,9 +17,11 @@ from .exceptions import (
     SMTPTransientError, SMTPPermanentError, SMTPConnectionError,
     SMTPAuthenticationError, TemplateError
 )
+from .types import GeneralSettings, ErrorType, PlaceholderDict
+from logging import Logger
 
 
-def categorize_smtp_error(error: Exception) -> tuple[bool, str]:
+def categorize_smtp_error(error: Exception) -> Tuple[bool, ErrorType]:
     """
     Categorize SMTP errors as transient or permanent.
     
@@ -72,11 +74,11 @@ def categorize_smtp_error(error: Exception) -> tuple[bool, str]:
 def send_email_with_pool(
     recipient: str,
     connection_pool: SMTPConnectionPool,
-    general: Dict,
-    logger,
+    general: GeneralSettings,
+    logger: Logger,
     template_path: str,
     attachment_path: Optional[str],
-    placeholders: Dict,
+    placeholders: PlaceholderDict,
     correlation_id: Optional[str] = None
 ) -> bool:
     """

@@ -1,0 +1,3 @@
+valid@domain.org - unknown - Failed to connect to SMTP server: Connection unexpectedly closed
+another@test.com - unknown - Failed to connect to SMTP server: Connection unexpectedly closed
+test@example.com - unknown - Failed to connect to SMTP server: Connection unexpectedly closed

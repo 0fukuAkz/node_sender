@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../send"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../SendFyre"
+		}
+	],
+	"settings": {}
+}

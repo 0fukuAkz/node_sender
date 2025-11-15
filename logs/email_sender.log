@@ -1,30 +1,109 @@
-2025-08-18 20:40:14,236 - WARNING - Skipping invalid email address: invalid-email
-2025-08-18 20:40:14,237 - WARNING - Skipping invalid email address: not-an-email
-2025-08-18 20:40:14,237 - INFO - 🚀 Starting dispatch to 3 recipients...
-2025-08-18 20:40:14,266 - INFO - [DRY-RUN] Would send to test@example.com: Important message from Austin and Sons
-2025-08-18 20:40:14,266 - INFO - [DRY-RUN] Would send to valid@domain.org: Important message from Shelton PLC
-2025-08-18 20:40:14,266 - INFO - [DRY-RUN] Would send to another@test.com: Important message from Curry Cook and Crawford
-2025-08-18 20:40:14,267 - INFO - [DRY-RUN] Sent to test@example.com
-2025-08-18 20:40:14,267 - INFO - [DRY-RUN] Sent to valid@domain.org
-2025-08-18 20:40:14,267 - INFO - [DRY-RUN] Sent to another@test.com
-2025-08-18 20:40:14,267 - INFO - ✅ Dispatch complete. Successes=3, Failures=0
-2025-08-18 20:48:12,937 - WARNING - Skipping invalid email address: invalid-email
-2025-08-18 20:48:12,937 - WARNING - Skipping invalid email address: not-an-email
-2025-08-18 20:48:12,938 - INFO - 🚀 Starting dispatch to 3 recipients...
-2025-08-18 20:48:12,955 - INFO - [DRY-RUN] Would send to test@example.com: Important message from Cole PLC
-2025-08-18 20:48:12,955 - INFO - [DRY-RUN] Sent to test@example.com
-2025-08-18 20:48:14,958 - INFO - [DRY-RUN] Would send to another@test.com: Important message from Weaver Johnson and Martin
-2025-08-18 20:48:14,958 - INFO - [DRY-RUN] Would send to valid@domain.org: Important message from Miller-Hurley
-2025-08-18 20:48:14,959 - INFO - [DRY-RUN] Sent to another@test.com
-2025-08-18 20:48:14,959 - INFO - [DRY-RUN] Sent to valid@domain.org
-2025-08-18 20:48:14,959 - INFO - ✅ Dispatch complete. Successes=3, Failures=0
-2025-08-18 20:48:19,496 - WARNING - Skipping invalid email address: invalid-email
-2025-08-18 20:48:19,496 - WARNING - Skipping invalid email address: not-an-email
-2025-08-18 20:48:19,497 - INFO - 🚀 Starting dispatch to 3 recipients...
-2025-08-18 20:48:19,507 - INFO - [DRY-RUN] Would send to test@example.com: Special offer from Hurst Inc: 50% off on Widget Pro
-2025-08-18 20:48:19,507 - INFO - [DRY-RUN] Sent to test@example.com
-2025-08-18 20:48:19,512 - INFO - [DRY-RUN] Would send to another@test.com: Special offer from Johnson Brown and Walker: 50% off on Widget Pro
-2025-08-18 20:48:19,512 - INFO - [DRY-RUN] Sent to another@test.com
-2025-08-18 20:48:19,515 - INFO - [DRY-RUN] Would send to valid@domain.org: Special offer from Cox Smith and Hill: 50% off on Widget Pro
-2025-08-18 20:48:19,515 - INFO - [DRY-RUN] Sent to valid@domain.org
-2025-08-18 20:48:19,515 - INFO - ✅ Dispatch complete. Successes=3, Failures=0
+2025-11-12 16:36:02,842 - INFO - ============================================================
+2025-11-12 16:36:02,843 - INFO - 🚀 Email Dispatcher - Production Mode
+2025-11-12 16:36:02,843 - INFO - ============================================================
+2025-11-12 16:36:02,845 - INFO - Loaded 3 placeholder values
+2025-11-12 16:36:02,845 - INFO - Loaded 5 leads from data/leads.txt
+2025-11-12 16:36:02,845 - WARNING - Skipping invalid email address: invalid-email
+2025-11-12 16:36:02,846 - WARNING - Skipping invalid email address: not-an-email
+2025-11-12 16:36:02,846 - INFO - Valid emails: 3, Invalid: 2, Duplicates removed: 0
+2025-11-12 16:36:02,847 - INFO - Loaded 2 suppressed addresses
+2025-11-12 16:36:02,868 - INFO - 📧 Starting new campaign with 3 emails
+2025-11-12 16:36:02,868 - INFO - 🔧 Initializing components...
+2025-11-12 16:36:02,869 - INFO - ✅ Connection pool initialized (size: 5)
+2025-11-12 16:36:02,869 - INFO - ✅ Rate limiter initialized (min: 0, hour: 0)
+2025-11-12 16:36:02,869 - INFO - ✅ Retry queue initialized (max retries: 3)
+2025-11-12 16:36:02,869 - INFO - ✅ Metrics collector initialized
+2025-11-12 16:36:02,869 - INFO - 🚀 Starting dispatch to 3 recipients...
+2025-11-12 16:36:02,869 - INFO - ⚙️  Concurrency: 10
+2025-11-12 16:36:02,869 - WARNING - ⚠️  DRY RUN MODE - No emails will be sent
+2025-11-12 16:36:03,581 - INFO - [DRY-RUN] Would send to valid@domain.org: Important message from Cole-Harmon
+2025-11-12 16:36:03,582 - INFO - [DRY-RUN] Would send to another@test.com: Important message from Hawkins Inc
+2025-11-12 16:36:03,582 - INFO - [DRY-RUN] Would send to test@example.com: Important message from Johnson Riddle and Hahn
+2025-11-12 16:36:03,614 - INFO - 
+============================================================
+2025-11-12 16:36:03,615 - INFO - 📊 Campaign Summary
+2025-11-12 16:36:03,615 - INFO - ============================================================
+2025-11-12 16:36:03,616 - INFO - Total Emails: 3
+2025-11-12 16:36:03,616 - INFO - Sent: 3
+2025-11-12 16:36:03,616 - INFO - Failed: 0
+2025-11-12 16:36:03,616 - INFO - Success Rate: 100.0%
+2025-11-12 16:36:03,617 - INFO - Elapsed Time: 0.7s
+2025-11-12 16:36:03,617 - INFO - Throughput: 3.0 emails/minute
+2025-11-12 16:36:03,617 - INFO - 
+🔌 Connection Pool Stats:
+2025-11-12 16:36:03,617 - INFO - Total Connections Created: 0
+2025-11-12 16:36:03,617 - INFO - Connection Reuse Rate: 0.0%
+2025-11-12 16:36:03,617 - INFO - 
+Campaign Metrics Summary
+==================================================
+Progress: 3/3 (100.0%)
+Success: 3 (100.0%)
+Failed: 0 (0.0%)
+Retries: 0
+Suppressed: 0
+Invalid: 0
+
+Throughput: 3.0 emails/minute
+Elapsed: 0.7 seconds
+ETA: 0.0 seconds
+2025-11-12 16:36:03,617 - INFO - 
+✅ Campaign complete!
+2025-11-12 16:36:03,618 - INFO - 📝 Campaign ID: campaign_1762983362_54c9e0d8
+2025-11-12 16:36:03,618 - INFO - ============================================================
+2025-11-12 16:37:24,743 - INFO - ============================================================
+2025-11-12 16:37:24,743 - INFO - 🚀 Email Dispatcher - Production Mode
+2025-11-12 16:37:24,743 - INFO - ============================================================
+2025-11-12 16:37:24,744 - INFO - Loaded 3 placeholder values
+2025-11-12 16:37:24,744 - INFO - Loaded 5 leads from data/leads.txt
+2025-11-12 16:37:24,744 - WARNING - Skipping invalid email address: invalid-email
+2025-11-12 16:37:24,744 - WARNING - Skipping invalid email address: not-an-email
+2025-11-12 16:37:24,744 - INFO - Valid emails: 3, Invalid: 2, Duplicates removed: 0
+2025-11-12 16:37:24,745 - INFO - Loaded 2 suppressed addresses
+2025-11-12 16:37:24,753 - INFO - 📧 Starting new campaign with 3 emails
+2025-11-12 16:37:24,753 - INFO - 🔧 Initializing components...
+2025-11-12 16:37:24,753 - INFO - ✅ Connection pool initialized (size: 5)
+2025-11-12 16:37:24,753 - INFO - ✅ Rate limiter initialized (min: 0, hour: 0)
+2025-11-12 16:37:24,753 - INFO - ✅ Retry queue initialized (max retries: 3)
+2025-11-12 16:37:24,753 - INFO - ✅ Metrics collector initialized
+2025-11-12 16:37:24,753 - INFO - 🚀 Starting dispatch to 3 recipients...
+2025-11-12 16:37:24,754 - INFO - ⚙️  Concurrency: 10
+2025-11-12 18:00:56,372 - ERROR - ❌ Failed to send to valid@domain.org: Failed to connect to SMTP server: Connection unexpectedly closed
+2025-11-12 19:24:17,217 - ERROR - ❌ Failed to send to another@test.com: Failed to connect to SMTP server: Connection unexpectedly closed
+2025-11-12 20:47:38,061 - ERROR - ❌ Failed to send to test@example.com: Failed to connect to SMTP server: Connection unexpectedly closed
+2025-11-12 20:47:38,083 - INFO - 
+============================================================
+2025-11-12 20:47:38,083 - INFO - 📊 Campaign Summary
+2025-11-12 20:47:38,084 - INFO - ============================================================
+2025-11-12 20:47:38,085 - INFO - Total Emails: 3
+2025-11-12 20:47:38,085 - INFO - Sent: 0
+2025-11-12 20:47:38,086 - INFO - Failed: 0
+2025-11-12 20:47:38,086 - INFO - Success Rate: 0.0%
+2025-11-12 20:47:38,086 - INFO - Elapsed Time: 15013.3s
+2025-11-12 20:47:38,086 - INFO - Throughput: 1.0 emails/minute
+2025-11-12 20:47:38,086 - INFO - 
+📥 Retry Queue: 3 items
+2025-11-12 20:47:38,086 - INFO - Dead Letter Queue: 0 items
+2025-11-12 20:47:38,086 - INFO - 
+🔌 Connection Pool Stats:
+2025-11-12 20:47:38,087 - INFO - Total Connections Created: 0
+2025-11-12 20:47:38,087 - INFO - Connection Reuse Rate: 0.0%
+2025-11-12 20:47:38,087 - INFO - 
+Campaign Metrics Summary
+==================================================
+Progress: 3/3 (100.0%)
+Success: 0 (0.0%)
+Failed: 3 (100.0%)
+Retries: 0
+Suppressed: 0
+Invalid: 0
+
+Throughput: 1.0 emails/minute
+Elapsed: 15013.3 seconds
+ETA: 0.0 seconds
+
+Error Breakdown:
+  transient: 3
+2025-11-12 20:47:38,087 - INFO - 
+✅ Campaign complete!
+2025-11-12 20:47:38,088 - INFO - 📝 Campaign ID: campaign_1762983444_a40ed23e
+2025-11-12 20:47:38,088 - INFO - ============================================================

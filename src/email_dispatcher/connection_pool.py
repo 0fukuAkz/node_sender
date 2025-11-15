@@ -6,15 +6,16 @@ import smtplib
 import ssl
 import threading
 import time
-from typing import Optional, Dict
+from typing import Optional
 from queue import Queue, Empty
 from .exceptions import SMTPConnectionError, SMTPAuthenticationError
+from .types import SMTPSettings, ConnectionStats
 
 
 class SMTPConnection:
     """Wrapper for SMTP connection with health tracking."""
     
-    def __init__(self, smtp_settings: Dict[str, any]):
+    def __init__(self, smtp_settings: SMTPSettings) -> None:
         """
         Initialize SMTP connection.
         

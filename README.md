@@ -1,8 +1,20 @@
-# 🚀 Email Dispatcher
+# 🚀 Email Dispatcher v2.0
 
-A powerful, feature-rich bulk email dispatcher with interactive setup wizard and command-line interface.
+A powerful, production-grade bulk email dispatcher with async support, multi-provider load balancing, A/B testing, and comprehensive analytics.
 
-## ✨ Features
+## 🆕 What's New in v2.0
+
+- **⚡ Async/Await Support** - 5-10x higher throughput with asyncio
+- **🔄 Multi-Provider Load Balancing** - Distribute across multiple SMTP providers
+- **🧪 A/B Testing** - Built-in framework for campaign optimization
+- **📊 Analytics & Reporting** - Comprehensive tracking and insights
+- **🔒 Improved Type Safety** - Full TypedDict type hints
+
+👉 **[Upgrade Guide](UPGRADE_GUIDE.md)** | **[New Features Documentation](docs/NEW_FEATURES.md)**
+
+---
+
+## ✨ Core Features
 
 - **Interactive Setup Wizard** - Guided configuration for beginners
 - **Command Line Interface** - Full CLI with argument parsing
@@ -491,7 +503,95 @@ python3 scripts/validate_email_config.py
 3. **Test Template**: Use dry-run mode
 4. **Check Dependencies**: Verify all packages installed
 
-## 📝 Examples
+## 🚀 Quick Examples
+
+### Async Bulk Sending (New in v2.0)
+
+```python
+import asyncio
+from src.email_dispatcher import send_bulk_emails_async
+
+async def main():
+    smtp_settings = {
+        'host': 'smtp.gmail.com',
+        'port': 587,
+        'username': 'your@gmail.com',
+        'password': 'app_password',
+        'use_tls': True,
+        'use_auth': True
+    }
+    
+    general = {
+        'dry_run': True,
+        'subject': 'Hello {company}!',
+        'template_path': 'templates/message.html',
+        # ... other settings
+    }
+    
+    recipients = ['user1@example.com', 'user2@example.com', ...]
+    
+    success, failure = await send_bulk_emails_async(
+        recipients=recipients,
+        smtp_settings=smtp_settings,
+        general=general,
+        logger=logger,
+        template_path='templates/message.html',
+        attachment_path=None,
+        placeholders={'company': 'Acme Corp'},
+        concurrency=50  # 5-10x faster!
+    )
+
+asyncio.run(main())
+```
+
+### Multi-Provider Load Balancing (New in v2.0)
+
+```python
+from src.email_dispatcher import SMTPProviderManager
+
+providers = [
+    {
+        'name': 'Gmail',
+        'weight': 0.6,
+        'smtp_settings': {...},
+        'max_emails_per_hour': 500
+    },
+    {
+        'name': 'Outlook',
+        'weight': 0.4,
+        'smtp_settings': {...},
+        'max_emails_per_hour': 300
+    }
+]
+
+manager = SMTPProviderManager(providers, strategy='weighted')
+provider = manager.get_provider()
+# Use provider.smtp_settings for sending
+```
+
+### A/B Testing (New in v2.0)
+
+```python
+from src.email_dispatcher import ABTestManager
+
+config = {
+    'test_name': 'Subject Test',
+    'variants': [
+        {'name': 'control', 'weight': 0.5, 'subject': 'Original'},
+        {'name': 'variant_a', 'weight': 0.5, 'subject': '🎉 New!'}
+    ]
+}
+
+ab_test = ABTestManager(config=config)
+variant = ab_test.assign_variant('user@example.com')
+# Use variant['subject'] for this user
+```
+
+More examples in `examples/` directory!
+
+---
+
+## 📝 Classic Examples
 
 ### Gmail Setup
 
